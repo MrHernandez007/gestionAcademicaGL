@@ -46,6 +46,14 @@ public class Student {
         }
 
     }
+
+    /* BORRADOR PARA EL PROMEDIO GENERAL del alumno
+    public double calculateGlobalAverage(){
+
+        List<Course> getApprovedCourses()
+    }
+    */
+
    }
 
    
