@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Professor {
@@ -10,12 +11,36 @@ public class Professor {
 
     private List<Course> courses;
 
-    public Professor(User user, String name, String lastName, List<Course> courses) {
+    public Professor(User user, String name, String lastName) {
         this.user = user;
         this.name = name;
         this.lastName = lastName;
-        this.courses = courses;
+        this.courses = new ArrayList<>();
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void assignCourse(Course course){
+        courses.add(course);
+    }
+
+    
+
+
 
     
 

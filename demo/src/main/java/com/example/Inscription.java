@@ -41,6 +41,10 @@ public class Inscription {
         return sum / testResult.size();
     }
 
+    public boolean didStudentPass(){
+        return course.getCriteria().pass(this);
+    }
+
     public void addTestResult(TestResult r){
         testResult.add(r);
     }

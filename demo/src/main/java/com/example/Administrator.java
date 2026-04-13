@@ -12,4 +12,18 @@ public class Administrator {
         this.lastName = lastName;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    
+
 }
