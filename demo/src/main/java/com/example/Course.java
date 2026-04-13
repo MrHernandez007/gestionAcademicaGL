@@ -30,7 +30,7 @@ public class Course {
     }
 
     public void addTopic(Topic topic){
-        topics.add(topic); //PENDIENTE
+        topics.add(topic); 
     }
 
     public void removeTopic(Topic topic){
@@ -54,7 +54,7 @@ public class Course {
     }
 
     public Professor getProfessor() {
-        return professor;
+        return professor; //EN DUDA
     }
 
     public String getName() {

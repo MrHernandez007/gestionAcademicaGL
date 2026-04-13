@@ -11,7 +11,7 @@ public class ApprovalCriteriaSimple implements ApprovalCriteria {
     @Override
     public boolean pass(Inscription inscripcion) {
         
-        for (TestResult tr : inscripcion.getTestResult()){
+        for (TestResult tr : inscripcion.getTestResults()){
             if ( tr.getGrade() >= minimun){
                 return true;
             }

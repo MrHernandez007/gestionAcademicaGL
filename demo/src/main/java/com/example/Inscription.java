@@ -7,12 +7,12 @@ public class Inscription {
 
     private Student student;
     private Course course;
-    private List<TestResult> testResult;
+    private List<TestResult> testResults;
 
     public Inscription(Student student, Course course) {
         this.student = student;
         this.course = course;
-        this.testResult = new ArrayList<>();
+        this.testResults = new ArrayList<>();
     }
 
     public Student getStudent() {
@@ -23,22 +23,22 @@ public class Inscription {
         return course;
     }
 
-    public List<TestResult> getTestResult() {
-        return testResult;
+    public List<TestResult> getTestResults() {
+        return testResults;
     }
 
     public double calcAverage(){
 
-        if (testResult.isEmpty()) {
+        if (testResults.isEmpty()) {
             return 0;
         } 
         double sum = 0;
-        for(TestResult re : testResult){
+        for(TestResult re : testResults){
 
             sum += re.getGrade();
 
         }
-        return sum / testResult.size();
+        return sum / testResults.size();
     }
 
     public boolean didStudentPass(){
@@ -46,7 +46,7 @@ public class Inscription {
     }
 
     public void addTestResult(TestResult r){
-        testResult.add(r);
+        testResults.add(r);
     }
 
     

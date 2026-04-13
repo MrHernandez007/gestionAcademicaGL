@@ -1,10 +1,10 @@
 package com.example;
 
-public class ApprovalCriteriaAvergae implements ApprovalCriteria{
+public class ApprovalCriteriaAverage implements ApprovalCriteria{
 
     private double minimun;
 
-    public ApprovalCriteriaAvergae(double minimun) {
+    public ApprovalCriteriaAverage(double minimun) {
         this.minimun = minimun;
     }
 
