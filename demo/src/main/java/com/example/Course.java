@@ -85,6 +85,43 @@ public class Course {
         return criteria;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public void showTopics(){
+        if(topics.isEmpty()){
+            System.out.println("There are no topics on this course.");
+            return;
+        }
+        System.out.println("Topics: ");
+        for(var a : topics){
+            System.out.println("  "+a);
+        }
+    }
+
+    public double getTestAverage(Student student){
+        for(var a : inscriptions){
+            if(a.getStudent().equals(student)){
+                return a.calcAverage();
+            }
+        }
+        return 0.0;
+    }
+
+    public double getClassAverage(){
+        double sum = 0;
+        for(var a: inscriptions){
+            sum += a.calcAverage();
+        }
+        return sum/inscriptions.size();
+    }
+    
+    
+
     
 
     
