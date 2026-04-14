@@ -16,6 +16,18 @@ public class Topic {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDurationHour(double durationHour) {
+        this.durationHour = durationHour;
+    }
+
     public String getDescription() {
         return description;
     }
