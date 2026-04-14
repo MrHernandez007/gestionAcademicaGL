@@ -4,44 +4,67 @@ import java.time.LocalDate;
 
 public class User {
 
-    private String userName; //EN DUDA, se accede con el email no un userName? 
     private String email;
-    private String paswordHash;
+    private String passwordHash;
     private TypeUser type;
     private LocalDate registrationDate;
 
-    private int failedAttempt;
+    private int failedAttempts;
     private boolean blocked;
 
-    public User(String userName, String email, String paswordHash, TypeUser type, int failedAttempt, boolean blocked, LocalDate registrationDate) {
-        this.userName = userName;
+    public User(String email, String passwordHash, TypeUser type, LocalDate registrationDate) {
         this.email = email;
-        this.paswordHash = paswordHash;
+        this.passwordHash = passwordHash;
         this.type = type;
-        this.failedAttempt = 0;
-        this.blocked = false;
         this.registrationDate = registrationDate;
+        this.failedAttempts = 0;
+        this.blocked = false;
     }
 
-    public void resetAttempts(){
-        failedAttempt = 0;
+    public String getEmail() {
+        return email;
     }
 
-    public void incrementAttempts(){
-        failedAttempt ++;
-        if (failedAttempt >= 3){
-            blocked = true;
-        }
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
-    public boolean isBlobked(){
+    public TypeUser getType() {
+        return type;
+    }
+
+    public LocalDate getRegistrationDate() {
+        return registrationDate;
+    }
+
+    public int getFailedAttempts() {
+        return failedAttempts;
+    }
+
+    public boolean isBlocked() {
         return blocked;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
 
-    
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
 
+    public void resetAttempts() {
+        failedAttempts = 0;
+    }
 
-
+    public void incrementAttempts() {
+        failedAttempts++;
+        if (failedAttempts >= 3) {
+            blocked = true;
+        }
+    }
 }

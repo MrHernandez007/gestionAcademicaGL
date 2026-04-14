@@ -8,7 +8,7 @@ public class Student {
     private User user;
     private String name;
     private String lastName;
-    private CourseStatus courseStatus;
+    private InscriptionStatus inscriptionStatus;
 
     private List<Inscription> inscriptions;
 

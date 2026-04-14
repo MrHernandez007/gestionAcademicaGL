@@ -1,5 +1,7 @@
 package com.example;
 
-public enum CourseStatus {
+public enum InscriptionStatus {
+
     APPROVED, FAILED, PENDING
+
 }

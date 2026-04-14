@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Inscription {
 
+    private InscriptionStatus status; //Nuevo
     private Student student;
     private Course course;
     private List<TestResult> testResults;
@@ -13,6 +14,7 @@ public class Inscription {
         this.student = student;
         this.course = course;
         this.testResults = new ArrayList<>();
+        //this.status = status;
     }
 
     public Student getStudent() {
@@ -25,6 +27,10 @@ public class Inscription {
 
     public List<TestResult> getTestResults() {
         return testResults;
+    }
+
+    public InscriptionStatus getStatus() {
+        return status;
     }
 
     public double calcAverage(){
@@ -48,6 +54,8 @@ public class Inscription {
     public void addTestResult(TestResult r){
         testResults.add(r);
     }
+
+    
 
     
 
