@@ -8,6 +8,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Login login = new Login();
+
+        System.out.println(login.login("admin@mail.com", "1234"));
+        
     }
 }
+
