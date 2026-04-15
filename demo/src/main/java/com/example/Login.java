@@ -20,7 +20,7 @@ public class Login {
 
         if (!user.getPasswordHash().equals(hashedInput)) {
 
-            user.incrementAttempts(); // 🔥 suma intento
+            user.incrementAttempts(); // suma intento
 
             if (user.isBlocked()) {
                 return "Usuario bloqueado por intentos fallidos";

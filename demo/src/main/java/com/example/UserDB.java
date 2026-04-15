@@ -9,19 +9,8 @@ public class UserDB {
     private List<User> users = new ArrayList<>();
 
     public UserDB() {
-        users.add(new User(
-                "admin@mail.com",
-                hash("1234"),
-                TypeUser.ADMINISTRATOR,
-                LocalDate.now()
-        ));
-
-        users.add(new User(
-                "user@mail.com",
-                hash("abcd"),
-                TypeUser.STUDENT,
-                LocalDate.now()
-        ));
+        users.add(new User("admin@mail.com",hash("1234"),TypeUser.ADMINISTRATOR,LocalDate.now()));
+        users.add(new User("user@mail.com",hash("abcd"),TypeUser.STUDENT,LocalDate.now()));
     }
 
     public User findByEmail(String email) {
@@ -33,7 +22,7 @@ public class UserDB {
         return null;
     }
 
-    // hash simple (igual que antes)
+    // hash simple 
     private String hash(String password) {
         return Integer.toString(password.hashCode());
     }
